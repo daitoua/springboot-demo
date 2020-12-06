@@ -14,6 +14,7 @@ import com.alibaba.fastjson.JSON;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @Controller
 @Slf4j
@@ -54,8 +55,7 @@ public class HelloWorldController {
         }
 
 
-
-
+        redisTemplate.opsForValue().set("?","?",10, TimeUnit.SECONDS);
 
 
 
