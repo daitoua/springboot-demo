@@ -20,6 +20,8 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class HelloWorldController {
 
+    public volatile static HelloWorldController getInstance;
+
     @Autowired
     private QueryUserServiceImpl queryUserServiceImpl;
     @Resource
